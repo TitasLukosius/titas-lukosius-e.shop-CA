@@ -11,12 +11,12 @@
     background: $background;
 }
 
-.tableCon h2, .tableCon button {
+.tableCon h2, .tableCon h3 .tableCon button {
     color: $primary;
 }
 
-.tableCon h3 {
-    color: $primary;
+.tableCon p {
+    color: $secondary;
 }
 
 .table {

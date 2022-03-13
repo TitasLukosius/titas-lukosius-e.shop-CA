@@ -31,7 +31,7 @@ $border-radius: 12px;
             @content;
         }
     }
-    @elseif $point == large {
+    @else if $point == large {
         //1000px
         @media (min-width: 1000px) {
             @content

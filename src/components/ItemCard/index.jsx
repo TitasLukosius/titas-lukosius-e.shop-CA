@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 
-const ItemCard = ({id, title, price, img, addToCart, description}) => {
+const ItemCard = ({id, title, price, img, href, addToCart,}) => {
     console.log(id, title, price, img);
     return (
         <Card>
@@ -19,7 +19,7 @@ const ItemCard = ({id, title, price, img, addToCart, description}) => {
                     </div>
                     <div className ={styles.Buttons}>
                         <button className={styles.Button} onClick={() => console.log(id)}>Add to Cart</button>
-                        <button className={styles.Button}><Link className={styles.ButtonLink}to={`/item/${id}`}>Learn more</Link></button>
+                        <button className={styles.Button}><Link className={styles.ButtonLink}to={`{/item/${id}}`}>Learn more</Link></button>
                     </div>
                 </div>
             </div>

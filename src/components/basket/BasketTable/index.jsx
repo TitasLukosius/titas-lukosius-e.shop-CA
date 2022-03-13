@@ -3,7 +3,13 @@ import styles from './index.module.scss';
 import BasketItem from '../BasketItem';
 
 
-const BasketTable = ({items, count}) => {
+const BasketTable = ({items}) => {
+   
+    let total = 0;
+
+    for(let i=0; i<items.length; i++) {
+        total += items[i].price;
+    }
 
     const itemsList = items.map(item => {
         return (
@@ -20,12 +26,11 @@ const BasketTable = ({items, count}) => {
                     <th></th>
                     <th>Item name</th>
                     <th>Price</th>
-                    <th>Amount</th>
                     <th>Remove</th>
-
                 </tr>
                 {itemsList}
             </table>
+            <p>Total Price: {total}</p>
             <button>checkout</button>
         </div>
     )

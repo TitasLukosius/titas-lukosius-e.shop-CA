@@ -4,7 +4,6 @@ import Form from '../components/form/Form';
 
 const Register = () => {
 
-    const [signedUsers, setSignedUsers] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
