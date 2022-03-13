@@ -1,0 +1,16 @@
+@import '../../../scss/variables';
+
+.itemGrid {
+    display: grid;
+    grid-area: itemGrid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint(large) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../scss/variables';
+
+.Card {
+    display: inline-block;
+    width: 100%;
+    height: 550px;
+    box-shadow: $shadow;
+    border-radius: 10px;
+    transition: .2s;
+    background: $white;
+    @include breakpoint(large) {
+        width: 90%;
+    }
+}
+
+.Card:hover {
+    box-shadow: 0 3px 10px 2px $primary;
+}

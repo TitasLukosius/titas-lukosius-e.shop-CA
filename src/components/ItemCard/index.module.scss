@@ -1,0 +1,69 @@
+@import '../../scss/variables';;
+
+.Item {
+    width: 100%;
+    height: 100%;
+    padding: $rem;
+    background: $primary;
+    color: $secondary
+}
+
+.Image {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.ItemBody {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        color: $secondary;
+    }
+}
+
+.Price {
+    width: 100%;
+    display: flex;
+    margin-bottom: $rem;
+}
+
+.Buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.Button {
+    padding: 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 10px;
+    background: $secondary;
+    color:  $primary;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.Button:hover {
+    border: none;
+    color: white;
+    background: $secondary;
+}
+
+.ButtonLink {
+    width: 100px;
+    text-decoration:none;
+    color:black;
+    transition: .2s;
+}
+
+.ButtonLink:hover {
+    color: $white;
+}

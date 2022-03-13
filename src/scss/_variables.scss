@@ -1,0 +1,40 @@
+// Spacing
+$rem: 16px;
+$navbar-height: 80px;
+
+//Colors
+$primary: #59AB30;
+$secondary:  #013220;
+$white: #fff;
+$grey-light: #eee;
+$grey: #999;
+$background: radial-gradient( $primary, $secondary);
+
+// Shadows
+$shadow: 0 3px 4px 2px #5555;
+
+//Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 32px;
+
+//header-hight
+$header-height: 100px;
+
+//border radius
+$border-radius: 12px;
+
+@mixin breakpoint($point) {
+    @if $point == medium {
+        //768px
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @elseif $point == large {
+        //1000px
+        @media (min-width: 1000px) {
+            @content
+        }
+    }
+}
