@@ -1,20 +1,16 @@
 
 import FormLayout from '../components/form/FormLayout';
 import Form from '../components/form/Form';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const Login = () => {
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const title = 'Login';
 
     const handleLogin = (e) => {
-
-        localStorage.setItem('loged-username', username);
-        localStorage.setItem('loged-password', password);
+        e.preventDefault();
+        console.log('titas');
     }
-
-    const title = 'Login';
 
     const inputs = [
         {
@@ -27,7 +23,7 @@ const Login = () => {
     
     return (
         <FormLayout>
-            <Form inputs={inputs} title={title} onSubmit={handleLogin} setUsername={setUsername} setPassword={setPassword}/>
+            <Form inputs={inputs} title={title} onSubmit={handleLogin} />
         </FormLayout>
     )
 }

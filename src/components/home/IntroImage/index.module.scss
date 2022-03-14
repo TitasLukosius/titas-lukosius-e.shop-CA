@@ -28,7 +28,7 @@
     transform: scale(1.1);
 }
 
-.IntroImage button {
+.IntroImage button, .IntroImage button a {
     padding: 10px;
     margin: 2px;
     border: none;
@@ -38,9 +38,10 @@
     cursor: pointer;
     transition: .2s;
     color: $secondary;
+    text-decoration: none;
 }
 
-.IntroImage button:hover {
+.IntroImage button:hover, .IntroImage button a:hover {
     border: none;
     color: white;
 }

@@ -4,14 +4,9 @@ import Form from '../components/form/Form';
 
 const Register = () => {
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-
     const handleRegister = (e) => {
         e.preventDefault();
-        console.log(e);
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
+        console.log('titas');
     }
 
     const title = 'Sign Up';
@@ -29,7 +24,7 @@ const Register = () => {
     ];
     return (
         <FormLayout>
-            <Form inputs={inputs} title={title} onSubmit={handleRegister} setUsername={setUsername} setPassword={setPassword}/>
+            <Form inputs={inputs} title={title} onSubmit={handleRegister}/>
         </FormLayout>
     )
 }

@@ -17,11 +17,17 @@
 }
 
 .Form button {
-    width: 200px;
-    color: white;
-    text-shadow: 2px 2px black;
+
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: $primary;
+    color:  $secondary;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
 }
 
 .Form button:hover {
-   background-color: $primary;
+   color: $white;
 }

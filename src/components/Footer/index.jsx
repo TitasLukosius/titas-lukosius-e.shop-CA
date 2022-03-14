@@ -1,11 +1,10 @@
 import React from 'react';
 import styles from './index.module.scss';
-import FooterList from '../FooterList';
+import FooterList from '../footer-list';
 
 const leftSide = [
     {id: 1, title: 'Home Page', href: '/'},
     {id: 2, title: 'Catalog', href: '/catalog'},
-    {id: 3, title: 'Item', href: '/item'}
 ];
 
 const middle = [

@@ -4,6 +4,10 @@ import ItemDescription from '../components/item/ItemDescription';
 import ItemImage from '../components/item/ItemImage';
 import { useParams } from "react-router-dom";
 
+import { selectItemById } from '../store/selectors';
+import { addToCart } from '../store/actionCreators';
+import { connect } from 'react-redux';
+
 
 const Item = ({ selectItemById, addToCart }) => {
     console.log(selectItemById);
@@ -18,5 +22,14 @@ const Item = ({ selectItemById, addToCart }) => {
     )
 }
 
-export default Item;
+const mapStateToProps = (store) => ({
+    selectItemById: id => selectItemById(store, id)
+});
+
+
+const mapDispatchToProps = dispatch => ({
+    addToCart: (id) => dispatch(addToCart(id))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Item);
 

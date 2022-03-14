@@ -1,12 +1,12 @@
 import React from 'react';
-import Catalog from './pages/Catalog';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Item from './pages/Item';
-import Basket from './pages/Basket';
+import Catalog from './pages/catalog';
+import Home from './pages/home';
+import Login from './pages/login';
+import Register from './pages/register';
+import Item from './pages/item';
+import Basket from './pages/basket';
 import Header from './components/header/index';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

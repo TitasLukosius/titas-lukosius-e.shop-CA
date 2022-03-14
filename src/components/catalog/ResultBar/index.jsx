@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './index.module.scss';
-import ItemCard from '../../ItemCard';
 
 const ResultBar = ({count, sortOrder, onSortOrderChange }) => {
 

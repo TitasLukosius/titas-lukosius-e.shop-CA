@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from "./index.module.scss";
-import Card from '../Card';
+import Card from '../card';
 import {
     Link
 } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+import { addToCart } from '../../store/actionCreators';
 
-const ItemCard = ({id, title, price, img, href, addToCart,}) => {
+
+const ItemCard = ({id, title, price, img, href, addToCart}) => {
     console.log(id, title, price, img);
     return (
         <Card>
@@ -18,7 +21,7 @@ const ItemCard = ({id, title, price, img, href, addToCart,}) => {
                         <strong>Price: {(Math.round(price * 100) / 100).toFixed(2)} $</strong>
                     </div>
                     <div className ={styles.Buttons}>
-                        <button className={styles.Button} onClick={() => console.log(id)}>Add to Cart</button>
+                        <button className={styles.Button} onClick={() => addToCart(id)}>Add to Cart</button>
                         <button className={styles.Button}><Link className={styles.ButtonLink}to={`/item${id}`}>Learn more</Link></button>
                     </div>
                 </div>
@@ -27,4 +30,8 @@ const ItemCard = ({id, title, price, img, href, addToCart,}) => {
     )
 }
 
-export default ItemCard;
+const mapDispatchToProps = dispatch => ({
+    addToCart: (id) => dispatch(addToCart(id))
+});
+
+export default connect(null, mapDispatchToProps)(ItemCard);

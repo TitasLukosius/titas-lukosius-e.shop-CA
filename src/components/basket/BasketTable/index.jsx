@@ -8,7 +8,11 @@ const BasketTable = ({items}) => {
     let total = 0;
 
     for(let i=0; i<items.length; i++) {
+        if (items[i].purchaseAmount > 1) {
+            total += items[i].price * items[i].purchaseAmount
+        } else {
         total += items[i].price;
+        }
     }
 
     const itemsList = items.map(item => {
@@ -26,6 +30,7 @@ const BasketTable = ({items}) => {
                     <th></th>
                     <th>Item name</th>
                     <th>Price</th>
+                    <th>Amount</th>
                     <th>Remove</th>
                 </tr>
                 {itemsList}

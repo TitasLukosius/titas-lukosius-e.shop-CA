@@ -42,11 +42,18 @@ th {
 .tableCon button {
     margin-top: 50px;
     width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: $secondary;
+    color:  $primary;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
 }
 
 .tableCon button:hover {
-    color: $secondary;
-    background: $primary;
+    color: $white;
 }
 
 
