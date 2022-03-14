@@ -139,7 +139,6 @@ const Catalog = ({initItems}) => {
     const [sortOrder, setSortOrder] = useState('a-z');
 
     const handleFilterChange = (typeId, title) => {
-        console.log(title);
         setFilters(
             filters.map(filterType => ({
                 ...filterType,
