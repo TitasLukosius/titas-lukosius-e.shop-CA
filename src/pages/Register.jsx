@@ -18,9 +18,6 @@ const Register = () => {
         {
             id: 2, name: 'password', type: 'password', placeholder: 'password'
         },
-        {
-            id: 3, name: 'repeatPassword', type: 'password', placeholder: 'repeat password'
-        },
     ];
     return (
         <FormLayout>

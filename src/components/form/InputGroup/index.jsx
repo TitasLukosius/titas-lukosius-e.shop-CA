@@ -1,15 +1,7 @@
 import React from 'react';
 import styles from './index.module.scss';
 
-const InputGroup = ({type, placeholder, name, setUsername, setPassword}) => {
-
-        const handleChange = (e) => {
-        if (type === 'text') {
-            setUsername(e.target.value)
-        } else {
-            setPassword(e.target.value)
-        }
-    }
+const InputGroup = ({type, placeholder, name, formik}) => {
 
     return (
         <div className={styles.InputGroup}>
@@ -17,10 +9,13 @@ const InputGroup = ({type, placeholder, name, setUsername, setPassword}) => {
                 name={name}
                 type={type}
                 placeholder={placeholder}
-                onChange={handleChange}
+                onChange={formik.handleChange}
+                value={formik.values.name}
             />
+            {formik.errors[name] ? 
+                <div className={styles.errors}>Laukelis privalomas</div> : null}
         </div>
 )
 }
 
-export default InputGroup
+export default InputGroup;

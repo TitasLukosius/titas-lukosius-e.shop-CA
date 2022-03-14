@@ -5,19 +5,20 @@ import React from 'react';
 
 const Login = () => {
 
-    const title = 'Login';
-
+    
     const handleLogin = (e) => {
         e.preventDefault();
         console.log('titas');
     }
+    
+    const title = 'Log in';
 
     const inputs = [
         {
-            id: 1, name: 'Username', type: 'text', placeholder: 'username'
+            id: 1, name: 'username', type: 'text', placeholder: 'username'
         }, 
         {
-            id: 2, name: 'Password', type: 'password', placeholder: '********'
+            id: 2, name: 'password', type: 'password', placeholder: 'password'
         }
     ];
     

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { removeFromCart } from '../../../store/actionCreators';
 
 const BasketItem = ({title, price, id, purchaseAmount, removeFromCart }) => {
-    console.log(purchaseAmount);
     return (
         <tr id={id}>
             <td>{id}.</td>

@@ -9,8 +9,7 @@ import { connect } from 'react-redux';
 import { addToCart } from '../../store/actionCreators';
 
 
-const ItemCard = ({id, title, price, img, href, addToCart}) => {
-    console.log(id, title, price, img);
+const ItemCard = ({id, title, price, img, addToCart}) => {
     return (
         <Card>
             <div className={styles.Item} key={id}>

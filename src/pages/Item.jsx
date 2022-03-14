@@ -10,9 +10,7 @@ import { connect } from 'react-redux';
 
 
 const Item = ({ selectItemById, addToCart }) => {
-    console.log(selectItemById);
     let { itemId } = useParams();
-    console.log(itemId);
     const { id, title, price, description, img } = selectItemById(Number(itemId));
     return (
         <ItemLayout>

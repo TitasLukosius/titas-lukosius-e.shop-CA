@@ -3,19 +3,20 @@ import styles from './index.module.scss';
 import {
     Link
 } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const FooterList = ({left, middle, right}) => {
 
     const leftSide = left.map((link) => {
-        return <Link className={styles.LinkL}to={link.href}>{link.title}</Link>
+        return <Link key={uuidv4()} className={styles.LinkL}to={link.href}>{link.title}</Link>
     })
 
     const middleSide = middle.map((link) => {
-        return <p className={styles.LinkM}to={link.href}>{link.description}</p>
+        return <p key={uuidv4()} className={styles.LinkM}to={link.href}>{link.description}</p>
     })
 
     const rightSide = right.map((link) => {
-        return <li className={styles.LinkR}to={link.href}>{link.title}</li>
+        return <li key={uuidv4()} className={styles.LinkR}to={link.href}>{link.title}</li>
     })
 
     return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.module.scss';
 import BasketItem from '../BasketItem';
+import { v4 as uuidv4 } from 'uuid';
 
 
 const BasketTable = ({items}) => {
@@ -17,7 +18,7 @@ const BasketTable = ({items}) => {
 
     const itemsList = items.map(item => {
         return (
-            <BasketItem {...item}/>
+            <BasketItem key={uuidv4()} {...item}/>
         )
     })
 

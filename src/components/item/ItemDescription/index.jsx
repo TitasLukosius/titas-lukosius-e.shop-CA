@@ -3,7 +3,6 @@ import styles from './index.module.scss';
 
 
 const ItemDescription = ({id, title, price, description, addToCart}) => {
-    console.log(id);
     return (
         <div className={styles.ItemDescription}>
             <h2>{title}</h2>

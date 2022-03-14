@@ -4,6 +4,7 @@ import FilterSidebar from '../components/catalog/FilterSidebar';
 import ItemGrid from '../components/catalog/ItemGrid';
 import ResultBar from '../components/catalog/ResultBar';
 import InputGroup from '../components/catalog/InputGroup';
+import { v4 as uuidv4 } from 'uuid';
 
 import { connect } from 'react-redux';
 import { selectItemsInPriceRange } from '../store/selectors';
